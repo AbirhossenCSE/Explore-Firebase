@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(97, 47, 18, 0.692),
+        rgba(97, 47, 18, 0.692)
+    ), url("coffie.jpeg");
+
+    background-size: cover;
+    background-position: center;;
+
+}
+
+.navbar{
+    height: 10%;
+    /* background: lightblue; */
+    display: flex;
+
+}
+
+
+.nav-left{
+    flex-basis: 30%;
+    background: whitesmoke;
+    position: relative;
+}
+.nav-icon{
+    left: 10%;
+    top: 10%;
+    position: absolute;
+}
+.nav-icon ul li{
+    display: inline-block;
+    margin-right: 10px;
+} 
+.nav-icon ul li i{
+    color: rgb(145, 87, 87);
+} 
+
+
+
+
+.nav-right{
+    flex-basis: 70%;
+    /* background: gray; */
+    background: rgba(97, 47, 18, 0.692);
+    position: relative; 
+}
+.nav-menu{
+    top: 20%;
+    right: 2%;
+    position: absolute;
+}
+.nav-menu ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}
+.nav-menu ul li a:hover{
+    color: chocolate;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+.logo{
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 30px;
+}
+
+
+
+
+
+.content{
+    height: 90%;
+    /* background: rosybrown; */
+    display: flex;
+}
+
+
+
+.content-left{
+    flex-basis: 30%;
+    background: white;
+    position: relative;
+}
+.socialmedia{
+    left: 5%;
+    bottom: 5%;
+    position: absolute;
+}
+.socialmedia ul li{
+    list-style: none;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    background: gray;
+    text-align: center;
+    line-height: 40px;
+}
+.socialmedia ul li i{
+    color: white;
+}
+.socialmedia ul li i:hover{
+    color: green;
+}
+
+
+
+.content-right{
+    flex-basis: 70%;
+    position: relative;
+}
+.text{
+    right: 10%;
+    bottom: 15%;
+    position: absolute;
+}
+.text h1{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+.text p{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+.display{
+    left: -20%;
+    bottom: 10%;
+    position: absolute;
+}
+.display img{
+    height: 70%;
+    width: 70%;
+}
