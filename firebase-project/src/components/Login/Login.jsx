@@ -21,6 +21,14 @@ const Login = () => {
         })
     }
 
+    const handleGithubSignIn = () =>{
+        signInWithPopup(auth, gitprovider)
+        .then(result => {
+            setUser(result.user)
+        })
+        .catch(error => console.log(error))
+    }
+
     const handleSignOut = ()=>{
         signOut(auth)
         .then(() =>{
@@ -29,6 +37,7 @@ const Login = () => {
         })
         .catch(error => console.log(error))
     }
+
 
     return (
         <div>
