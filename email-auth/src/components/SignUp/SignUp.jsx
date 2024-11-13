@@ -1,7 +1,9 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase.init';
+import { useState } from 'react';
 
 const SignUp = () => {
+    const [errorMessagr, setErrorMessage] = useState('');
 
     const handleSignUp = e =>{
         e.preventDefault();
@@ -9,13 +11,17 @@ const SignUp = () => {
         const password = e.target.password.value;
         console.log(email, password);
 
+        //reset error message
+        setErrorMessage('');
+
         // Create user
         createUserWithEmailAndPassword(auth, email, password)
         .then(result =>{
             console.log(result.user);
         })
         .catch(error =>{
-            console.log("ERROR", error);           
+            console.log("ERROR", error); 
+            setErrorMessage(error.message)          
         })
     }
 
@@ -42,6 +48,9 @@ const SignUp = () => {
                             <button className="btn btn-primary">Sign-Up</button>
                         </div>
                     </form>
+                    {
+                        errorMessagr && <p className='text-red-600'>{errorMessagr}</p>
+                    }
                 </div>
     );
 };
