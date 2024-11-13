@@ -1,8 +1,10 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase.init";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
+    const [loginError, setLoginError] = useState();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -14,6 +16,10 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 console.log(result.user);
+
+                if (!result.user.emailVerified) {
+                    setLoginError('verify email')
+                }
             })
             .catch(error => {
                 console.log('ERROR', error.message);
