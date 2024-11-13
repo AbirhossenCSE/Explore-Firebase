@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase.init";
 
 
+
 const Register = () => {
     
     const handleRegister = (e) =>{
@@ -14,9 +15,10 @@ const Register = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then(result =>{
             console.log(result.user);
+            
         })
         .catch(error =>{
-            console.log("ERROR", error);
+            console.log(error);
             
         })
         
