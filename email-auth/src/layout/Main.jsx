@@ -3,7 +3,7 @@ import Header from "../components/Header/Header";
 
 const Main = () => {
     return (
-        <div>
+        <div className="w-10/12 mx-auto">
             <Header></Header>
             <Outlet></Outlet>
         </div>
