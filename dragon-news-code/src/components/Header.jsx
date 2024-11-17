@@ -1,5 +1,9 @@
 import React from 'react';
 import logo from '../assets/logo.png'
+import moment from 'moment/moment';
+
+
+
 
 const Header = () => {
     return (
@@ -8,7 +12,8 @@ const Header = () => {
                 <img className='w-[300px]' src={logo} alt="" />
             </div>
             <h2>Journalism Without Fear or Favour</h2>
-            <p>Sunday, November 27, 2025</p>
+            {/* <p> {moment().format("dddd, MMMM Do YYYY, h:mm:ss a");} </p> */}
+            <p> {moment().format('dddd, MMMM Do YYYY')} </p>
         </div>
     );
 };
