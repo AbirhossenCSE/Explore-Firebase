@@ -2,6 +2,7 @@ import React from 'react';
 import { AiFillStar } from "react-icons/ai";
 import { FaEye } from "react-icons/fa";
 import { FiShare2 } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 const NewsCard = ({ news }) => {
     const {
@@ -52,9 +53,9 @@ const NewsCard = ({ news }) => {
                 <p className="text-gray-600 text-sm mb-4">
                     {details.substring(0, 120)}...
                 </p>
-                <button className="text-blue-500 font-medium hover:underline">
+                <Link to={`/news/${news._id}`} className="text-blue-500 font-medium hover:underline">
                     Read More
-                </button>
+                </Link>
             </div>
 
             {/* Footer Section */}
