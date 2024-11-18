@@ -42,7 +42,7 @@ const NewsCard = ({ news }) => {
                 <img
                     src={thumbnail_url}
                     alt="Thumbnail"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-52 object-cover"
                 />
             </figure>
 
