@@ -16,7 +16,7 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+    
 
         userLogin(email, password)
             .then((result) => {
@@ -27,8 +27,8 @@ const Login = () => {
             .catch((err) => {
                 setError({ ...error, login: err.code })
             });
-
     }
+    
     return (
         <div className='min-h-screen flex justify-center items-center'>
             <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
