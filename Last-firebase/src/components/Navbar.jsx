@@ -87,7 +87,7 @@ const Navbar = () => {
                     </button>
                 ) : (
                     <Link to="/auth/login" className="btn btn-neutral rounded-lg">
-                        Login
+                        Log-In
                     </Link>
                 )}
             </div>
